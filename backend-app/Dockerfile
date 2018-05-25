@@ -2,6 +2,7 @@ FROM python:3.6.4
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /backend
+RUN mkdir /backend_logs
 ADD . /backend
 
 RUN pip3 install --upgrade pip
