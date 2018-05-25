@@ -26,6 +26,6 @@ BACKEND_NGINX_PORT=13660
 FRONTEND_REQ_PORT=13660
 
 ALLOWED_LIST='backend-app'
-CORS_LIST='https://madblackpixels.com:13660','http://madblackpixels.com:13660'
+CORS_LIST='https:\/\/madblackpixels.com:13660','http:\/\/madblackpixels.com:13660'
 
 #
