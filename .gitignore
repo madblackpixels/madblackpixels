@@ -5,7 +5,7 @@ nginx.conf
 __pycache__/
 *.pyc 
 
-/node_modules
+node_modules/
 /coverage
 /build
 common.js
