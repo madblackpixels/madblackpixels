@@ -4,3 +4,4 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 RUN  mkdir /frontend_logs
 
 CMD ["nginx", "-g", "daemon off;"]
+WORKDIR /frontend_logs
