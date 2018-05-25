@@ -5,7 +5,9 @@ python3 /backend/manage.py makemigrations
 python3 /backend/manage.py migrate
 python3 /backend/manage.py makemigrations common
 python3 /backend/manage.py migrate common
-python3 /backend/manage.py loaddata /backend/fixtures/common_example.json
+
+python3 /backend/manage.py loaddata /backend/fixtures/common_langs.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_pages.json
 
 echo "from django.contrib.auth.models import User; 
 User.objects.filter(email=$ADMIN_MAIL).delete(); 

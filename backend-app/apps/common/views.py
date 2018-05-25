@@ -1,10 +1,9 @@
 from rest_framework import generics
 
-from apps.common.models      import Example
+from apps.common.models      import Pages
 from apps.common.serializers import PagesSerializer
 
 
-class Example_json(generics.ListAPIView):
+class IntroPage(generics.ListAPIView):
     serializer_class = PagesSerializer
-    queryset = Example.objects.all()
-
+    queryset = Pages.objects.filter(name='IntroPage') 
