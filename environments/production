@@ -1,0 +1,31 @@
+######## ARGS #######
+PROTOCOL=http
+HOST_NAME=madblackpixels.com
+FRONTEND_REQ_HOST=madblackpixels.com
+
+POSTGRES_DB=madblackpixel
+POSTGRES_USER=madblackpixel
+POSTGRES_PASSWORD=1Fscj(4-24lsd-k)3kpeYd
+
+ADMIN_NAME='madblack'
+ADMIN_PASS='Qwerty1!qaz!'
+ADMIN_MAIL='madblackpixels@yandex.ru'
+
+SECRET_KEY=']da711&-234gsvs68dc-j62vfws124)(sdfxv5vxq&pqe*6*dqunn-s&'
+
+
+
+##### CONSTANTS #####
+BACKEND_SERVICE_HOST=0.0.0.0
+BACKEND_SERVICE_PORT=11011
+
+POSTGRES_PORT=5432
+POSTGRES_HOST=database
+
+BACKEND_NGINX_PORT=13660 
+FRONTEND_REQ_PORT=13660
+
+ALLOWED_LIST='backend-app'
+CORS_LIST='localhost','127.0.0.1'
+
+#
