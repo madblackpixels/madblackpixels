@@ -1,0 +1,14 @@
+.DS_Store
+settings.py 
+nginx.conf
+
+__pycache__/
+*.pyc 
+
+/node_modules
+/coverage
+/build
+common.js
+*.local
+
+
