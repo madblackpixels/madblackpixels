@@ -81,7 +81,7 @@ if [[ $env_name = "production" ]]; then
 	sed -i -e "s/BACKEND_SERVICE_PORT/$BACKEND_SERVICE_PORT/"            ./backend-nginx/nginx.conf
 
 	sed -i -e "s/HOST_NAME/$HOST_NAME/" 								 ./frontend-nginx/nginx.conf
-	sed -i -e "s/server_name ;/server_name $HOST_NAME, www.$HOST_NAME;/" ./backend-nginx/nginx.conf
+	sed -i -e "s/HOST_NAME/$HOST_NAME/" 				 				 ./backend-nginx/nginx.conf
 
 	rm -rf ./frontend-nginx/nginx.conf-e
 	rm -rf ./backend-nginx/nginx.conf-e
