@@ -1,14 +1,16 @@
 .DS_Store
 settings.py 
 nginx.conf
+.idea/
+common.js
 
 __pycache__/
-*.pyc 
+*.pyc
+env/
 
 node_modules/
 coverage/
 build/
-common.js
 *.local
 
 
