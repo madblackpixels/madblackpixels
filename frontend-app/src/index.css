@@ -156,7 +156,7 @@ body{
 /* - > Intro block < - */
 .intro-block{
     position: absolute;
-    max-width: 860px;
+    max-width: 925px;
     top: 35%;
     margin-left: auto;
     margin-right: auto;
@@ -201,6 +201,9 @@ body{
 
 @media (max-width: 1200px) {
     .container{ width: 980px; }
+    .intro-block__h1{font-size: 100px;}
+    .intro-block__h2{font-size: 36px;}
+    .intro-block{max-width: 775px;}
 }
 
 @media (max-width: 1120px) {
@@ -234,7 +237,7 @@ body{
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .intro-block__h1{
         font-size: 45px;
     }
@@ -243,6 +246,7 @@ body{
         margin-left: 0;
     }
     .intro-block{
-        left: 8px;
+        margin-left: -5px;
+        max-width: 90%;
     }
 }
