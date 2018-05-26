@@ -21,12 +21,8 @@ export default class Intro extends Component {
                     />
                 </Scene>
                 <Grid className="intro-block">
-                    {this.props.page_text_content.map(item => (
-                        <div key={item.id}>
-                            <h1 className="intro-block__h1">{item.data_ru.main_title}</h1>
-                            <h2 className="intro-block__h2">{item.data_ru.main_sub_title}</h2>
-                        </div>
-                    ))}
+                    <h1 className="intro-block__h1">{this.props.page_text_content.main_title}</h1>
+                    <h2 className="intro-block__h2">{this.props.page_text_content.main_sub_title}</h2>
                 </Grid>
             </Grid>
         )

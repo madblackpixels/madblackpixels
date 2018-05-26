@@ -13,18 +13,22 @@ export default class Main extends Component {
 
     async componentWillMount() {
         try {
-            var sourceFile = require('../common');
+            const sourceFile = require('../common');
             const text_content = await fetch(
                 sourceFile.hostname + 
                 "/main_page_content"
             );
-            const page_text_content = await text_content.json();
+
+            const json_data = await text_content.json();
+            const page_text_content = json_data[0]['data_ru'];
+
             this.setState({page_text_content});
         } catch (e) {
             console.log(e);
         }
     }
-
+    //await text_content.json();
+//
     render() {
         return (
             <Router>
