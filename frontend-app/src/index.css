@@ -52,6 +52,16 @@ body{
 .nav > li > a:focus, .nav > li > a:hover{
     background-color: #353535;
 }
+.btn{
+    box-shadow: none;
+    outline: 0;
+}
+.btn-default{
+    border: none;
+    border-radius: 0;
+    background: none;
+    color:#333;
+}
 
 /* - > Header < - */
 .headroom-wrapper__max_width {
@@ -176,7 +186,12 @@ body{
     user-select: none;
 }
 
-
+/* - > Language choice btn < - */
+.btn-group__lang{
+    float: right;
+    right: 32px;
+    top: 13px;
+}
 
 
 

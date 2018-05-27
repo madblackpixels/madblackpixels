@@ -12,7 +12,8 @@ export default class App extends Component {
         super(props)
 
         this.state = {
-            isOpen: false
+            isOpen:   false,
+            siteLang: 'data_ru'
         }
     }
 
@@ -24,9 +25,9 @@ export default class App extends Component {
         return(
             <Router>
                 <div>
-                    <Header showMenu={this.updateData.bind(this)} />
+                    <Header changeLang={this.updateData.bind(this)} showMenu={this.updateData.bind(this)} />
                     <MenuBar isOpen={this.state.isOpen} />
-                    <Main />
+                    <Main siteLang={this.state.siteLang}/>
                 </div> 
             </Router>
         )

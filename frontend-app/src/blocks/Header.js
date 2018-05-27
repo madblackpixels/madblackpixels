@@ -4,8 +4,9 @@ import Headroom from 'react-headroom'
 import { Grid } from 'react-bootstrap'
 
 // components
-import MenuBtn   from '../components/MenuBtn'
-import BrandLogo from '../components/BrandLogo'
+import MenuBtn    from '../components/MenuBtn'
+import BrandLogo  from '../components/BrandLogo'
+import LangButton from '../components/LangButton'
 
 
 // code
@@ -16,6 +17,7 @@ export default class Header extends Component {
                 <Grid fluid={true} className="headroom-wrapper__max_width background__black_small">
                     <BrandLogo />
                     <MenuBtn showMenu={this.props.showMenu} />
+                    <LangButton changeLang={this.props.changeLang}/>
                 </Grid>
             </Headroom>
         )

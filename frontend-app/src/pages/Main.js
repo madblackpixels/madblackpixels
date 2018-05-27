@@ -8,27 +8,36 @@ import Intro from "../blocks/Intro";
 export default class Main extends Component {
 
     state = {
-        page_text_content: []
+        page_text_content: {}
     };
 
-    async componentWillMount() {
-        try {
+    async getTextContent() {
+        try{
             const sourceFile = require('../common');
             const text_content = await fetch(
-                sourceFile.hostname + 
+                sourceFile.hostname +
                 "/main_page_content"
             );
 
             const json_data = await text_content.json();
-            const page_text_content = json_data[0]['data_ru'];
+            const page_text_content = json_data[0][this.props.siteLang];
 
             this.setState({page_text_content});
         } catch (e) {
             console.log(e);
         }
     }
-    //await text_content.json();
-//
+
+    componentWillReceiveProps(nextState) {
+        if (this.state.page_text_content !== nextState.page_text_content) {
+            this.getTextContent()
+        }
+    }
+
+    componentWillMount() {
+        this.getTextContent()
+    }
+
     render() {
         return (
             <Router>
