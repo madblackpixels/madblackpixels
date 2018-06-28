@@ -1,35 +1,54 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
-// blocks
-import MenuBar from './blocks/MenuBar'
-import Header  from './blocks/Header'
-import Main    from './pages/Main'
+// bootstrap
+import { Grid } from 'react-bootstrap'
+
+// system general blocks
+import SiteHeader from './blocks/General/General_SiteHeader'
+import SlideMenu  from './blocks/General/General_SlideMenu'
+
+// pages
+import MainPage from './pages/MainPage'
+
 
 // code
 export default class App extends Component {
+
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            isOpen:   false,
-            siteLang: 'data_ru'
-        }
-    }
+            siteLang : 'data_ru',
+            menuOpen : false,
+        };
 
-    updateData(config) {
-        this.setState(config)
-    }
+        this.update_AppStates = this.update_AppStates.bind(this);
+    };
+
+
+    update_AppStates(event) {
+        this.setState(event);
+    };
+
 
     render() {
+
         return(
-            <Router>
-                <div>
-                    <Header changeLang={this.updateData.bind(this)} showMenu={this.updateData.bind(this)} />
-                    <MenuBar isOpen={this.state.isOpen} />
-                    <Main siteLang={this.state.siteLang}/>
-                </div> 
-            </Router>
+             <Grid fluid={true} className="no-padding">
+
+                 <SiteHeader  update_AppStates={this.update_AppStates.bind(this)} />
+                 <SlideMenu   update_AppStates={this.update_AppStates.bind(this)} menuOpen={this.state.menuOpen} />
+
+                 <Switch>
+                     <Route path='/'
+                         render={
+                             (props) => <MainPage {...props} lang={this.state.siteLang} />
+                         }
+                     />
+                 </Switch>
+
+             </Grid>
         )
-    }
+    };
 }

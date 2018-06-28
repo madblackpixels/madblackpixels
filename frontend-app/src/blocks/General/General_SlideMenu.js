@@ -1,15 +1,27 @@
 import React, { Component } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
+// bootstrap
 import { Nav, NavItem } from 'react-bootstrap'
 
+// components
+import Header__SiteLangBtnGroup from '../../components/Header__SiteLangBtnGroup'
 
 // code
-export default class MenuBar extends Component {
-    render() {
-        return(
+export default class General_SlideMenu extends Component {
 
-            <Menu isOpen={this.props.isOpen} customBurgerIcon={false} className="background__black">
+    changeMenuFlag (state) {
+        this.props.update_AppStates({ menuOpen: state.isOpen })
+    };
+
+
+    render() {
+
+        return(
+            <Menu
+                isOpen={this.props.menuOpen} customBurgerIcon={false}
+                className="background-color__black" onStateChange={(state) => this.changeMenuFlag(state) } >
+
                 <div className="bm-vertical-menu">
                     <Nav>
                         <NavItem href="/" className="slide-menu">
