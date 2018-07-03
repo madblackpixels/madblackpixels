@@ -7,6 +7,7 @@ import { Grid } from 'react-bootstrap'
 // system general blocks
 import SiteHeader from './blocks/General/General_SiteHeader'
 import SlideMenu  from './blocks/General/General_SlideMenu'
+import Footer     from './blocks/General/General_SiteFooter'
 
 // pages
 import MainPage from './pages/MainPage'
@@ -36,7 +37,6 @@ export default class App extends Component {
 
         return(
              <Grid fluid={true} className="no-padding">
-
                  <SiteHeader  update_AppStates={this.update_AppStates.bind(this)} />
                  <SlideMenu   update_AppStates={this.update_AppStates.bind(this)} menuOpen={this.state.menuOpen} />
 
@@ -48,6 +48,7 @@ export default class App extends Component {
                      />
                  </Switch>
 
+                 <Footer />
              </Grid>
         )
     };

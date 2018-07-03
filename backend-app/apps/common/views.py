@@ -6,4 +6,9 @@ from apps.common.serializers import PagesSerializer
 
 class IntroPage(generics.ListAPIView):
     serializer_class = PagesSerializer
-    queryset = Pages.objects.filter(name='IntroPage') 
+    queryset = Pages.objects.filter(name='IntroPage')
+
+
+class ContactPage(generics.ListAPIView):
+    serializer_class = PagesSerializer
+    queryset = Pages.objects.filter(name='ContactPage')

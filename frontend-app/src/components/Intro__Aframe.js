@@ -12,7 +12,7 @@ export default class Intro__Aframe extends Component {
     render() {
 
         return(
-            <Scene embedded={true} cursor={'rayOrigin: mouse'} >
+            <Scene embedded={true}>
                 <Entity
                     particle-system={{
                         preset: 'dust',

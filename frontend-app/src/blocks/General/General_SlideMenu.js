@@ -4,9 +4,6 @@ import { slide as Menu } from 'react-burger-menu'
 // bootstrap
 import { Nav, NavItem } from 'react-bootstrap'
 
-// components
-import Header__SiteLangBtnGroup from '../../components/Header__SiteLangBtnGroup'
-
 // code
 export default class General_SlideMenu extends Component {
 

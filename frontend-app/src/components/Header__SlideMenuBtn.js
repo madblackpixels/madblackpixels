@@ -15,9 +15,9 @@ export default class Header__SlideMenuBtn extends Component {
         return(
              <div className="bm-burger-button">
                  <span>
-                     <span className="background-color__black bm-burger-button__top" />
-                     <span className="background-color__black bm-burger-button__middle" />
-                     <span className="background-color__black bm-burger-button__bottom" />
+                     <span className="burger-button__color bm-burger-button__top" />
+                     <span className="burger-button__color bm-burger-button__middle" />
+                     <span className="burger-button__color bm-burger-button__bottom" />
                  </span>
                  <button className="bm-burger-button__btn" onClick={this.updateMenuFlag}>
                      open menu

@@ -4,12 +4,20 @@
     "model": "common.langs",
     "fields": {
       "ru": {
-        "main_title":"MadBlackPixels",
-        "main_sub_title":"студия веб разработки"
-        },
+        "main_intro_title":"MadBlackPixels",
+        "main_intro_sub_title":"студия веб разработки",
+        "main_lead_title":"Давайте общаться",
+        "main_lead_input_name":"Ваше имя",
+        "main_lead_input_mail":"Ваша почта",
+        "main_lead_input_problem":"Опишите ваш проект..."
+      },
       "en": {
-        "main_title":"MadBlackPixels",
-        "main_sub_title":"web development studio"
+        "main_intro_title":"MadBlackPixels",
+        "main_intro_sub_title":"web development studio",
+        "main_lead_title":"Let's talk",
+        "main_lead_input_name":"Your name",
+        "main_lead_input_mail":"Your mail",
+        "main_lead_input_problem":"Describe your project..."
       }
     }
   }

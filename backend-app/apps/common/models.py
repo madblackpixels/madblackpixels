@@ -12,3 +12,8 @@ class Pages(models.Model):
     data = models.ForeignKey(Langs, on_delete=models.CASCADE)
 
 
+class Lead(models.Model):
+    name = models.CharField(max_length=100, blank=False)
+    mail = models.CharField(max_length=140, blank=False)
+    text = models.TextField()
+

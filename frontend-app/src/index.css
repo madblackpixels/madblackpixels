@@ -4,13 +4,13 @@
 .text-color__black{
     color: #353535;
 }
-.background-color__black{
-    background-color: #353535;
-}
 .text-color__white{
     color: #f7f7f7;
 }
-.text-color__white{
+.background-color__black{
+    background-color: #353535;
+}
+.background-color__white{
     background-color: #f7f7f7;
 }
 
@@ -32,6 +32,15 @@
 }
 .brand-logo__white {
     display: none;
+}
+/* - > Footer < - */
+.block__footer{
+    padding: 8px;
+}
+
+/* - > Footer__logo < - */
+.brand-logo__footer{
+    width: 35px;
 }
 
 /* - > Slide_menu_btn < - */
@@ -80,6 +89,12 @@
     font-size: 8px;
     cursor: pointer;
 }
+.bm-cross {
+  background: #f7f7f7;
+}
+.burger-button__color{
+    background-color: #353535;
+}
 
 /* - > Site_langBtnGroup < - */
 .btn-group__lang{
@@ -87,6 +102,12 @@
     right: 32px;
     top: 13px;
 }
+.btn__lang:hover, .btn__lang:focus{
+    border-color: #353535;
+    background: none;
+    outline: 0;
+}
+
 
 /* - > Slide_menu_block < - */
 .bm-menu-wrap, .bm-overlay {
@@ -106,10 +127,14 @@
     padding: 0 15px 0 15px;
 }
 .bm-vertical-menu {
-    padding: 40px 20px 10px 20px;
+    padding: 100px 20px 10px 20px;
 }
 .nav-pills > li {
     float: none;
+}
+.slide-menu a{
+    color: #f7f7f7;
+    font-size: 22px;
 }
 
 /* - > Intro_Block < - */
@@ -139,16 +164,35 @@
     user-select: none;
 }
 
+/* - > Contact_Block < - */
+.block__contact{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
 
 /* - > Other < - */
 .no-padding{
     padding: 0;
 }
+.text-center{
+    text-align: center;
+}
 .full-screen-height{
     height: 100vh;
     min-height: 450px;
 }
-
+.link-default__white,
+.link-default__white:hover{
+    color: #f7f7f7;
+}
+.block__h2{
+    font-size: 64px;
+    font-weight: 800;
+}
+.block__container{
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
 
 
 
@@ -161,22 +205,32 @@ body{
     font-family: 'Play', sans-serif;
 }
 .btn{
-    border: none;
+    border: 1px solid transparent;
     border-radius: 0px;
     background: none;
     box-shadow: none;
     text-shadow: none;
 }
-.btn:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+.nav > li > a:focus, .nav > li > a:hover{
+    background: none;
 }
-.btn:focus .btn:checked{
-    outline: 0;
+.row{
+    margin-left: 0;
+    margin-right: 0;
 }
-
-
-
-
+.form-control{
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0px;
+    border: 1px solid #bfbfbf;
+}
+.form-control:focus{
+    border-color: #353535;
+    box-shadow: none;
+}
+textarea {
+    resize: vertical;
+}
 
 
 
@@ -239,7 +293,14 @@ body{
         display: inherit;
     }
     .btn__lang{
-        color: #fff;
+        color: #f7f7f7;
+    }
+    .btn__lang:hover, .btn__lang:focus{
+        color: #f7f7f7;
+        border-color: #f7f7f7;
+    }
+    .burger-button__color{
+        background-color: #f7f7f7;
     }
     .intro-block{
         width: 400px;
