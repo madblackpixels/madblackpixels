@@ -4,6 +4,10 @@ from apps.common import views
 
 urlpatterns = [
     url(r'^main_page_content/$', views.IntroPage.as_view()),
+
+    # -------------------------------------------------------------- >
+    url(r'^send_lead/$', views.LeadCreate.as_view())
 ]
+
 
 urlpatterns = format_suffix_patterns(urlpatterns) 

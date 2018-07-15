@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "common.langs",
+    "model": "common.lang",
     "fields": {
       "ru": {
         "main_intro_title":"MadBlackPixels",
@@ -9,7 +9,10 @@
         "main_lead_title":"Давайте общаться",
         "main_lead_input_name":"Ваше имя",
         "main_lead_input_mail":"Ваша почта",
-        "main_lead_input_problem":"Опишите ваш проект..."
+        "main_lead_input_problem":"Опишите ваш проект",
+        "main_lead_hello_description":"Остались вопросы? Есть идеи? Давайте общаться!",
+        "main_lead_join_description":"Можешь отправить свое резюме, если хочешь работать с нами.",
+        "main_lead_submit_btn":"отправить"
       },
       "en": {
         "main_intro_title":"MadBlackPixels",
@@ -17,7 +20,10 @@
         "main_lead_title":"Let's talk",
         "main_lead_input_name":"Your name",
         "main_lead_input_mail":"Your mail",
-        "main_lead_input_problem":"Describe your project..."
+        "main_lead_input_problem":"How can we can help?",
+        "main_lead_hello_description":"Any question? Any idea? Let's Talk!",
+        "main_lead_join_description":"Send your story if you want join to us.",
+        "main_lead_submit_btn":"send"
       }
     }
   }

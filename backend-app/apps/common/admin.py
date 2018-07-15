@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Langs, Pages
+from .models import Lang, Lead
 
-admin.site.register(Pages)
-admin.site.register(Langs)
+admin.site.register(Lang)
+admin.site.register(Lead)

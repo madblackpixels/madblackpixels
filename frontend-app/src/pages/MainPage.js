@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { getSimpleData }    from '../logic/General_ApiReq'
 
 //bootstrap
 import { Grid } from 'react-bootstrap'
@@ -11,35 +12,26 @@ import Main_LeadBlock    from '../blocks/Site/Main_LeadBlock'
 export default class MainPage extends Component {
 
     state = {
-        content: {}
+        content: {},
     };
 
 
-    async getData() {
-        try{
-            const sourceFile = require('../common');
-            const text_content = await fetch(
-                sourceFile.hostname +
-                "/main_page_content"
-            );
+    updateContent() {
+        getSimpleData("/main_page_content").then(result => this.setState({
+            content: result[this.props.lang]
+        }))
+    }
 
-            const json_data = await text_content.json();
-            const content   = json_data[0][this.props.lang];
 
-            this.setState({content});
-
-        } catch (e) {
-            console.log(e);
-        }
+    componentWillMount() {
+        this.updateContent()
     };
 
-
-    componentWillMount() { this.getData() };
     componentWillReceiveProps(nextState) {
         if (this.state.content !== nextState.state) {
-            this.getData()
+            this.updateContent()
         }
-    };
+    }
 
 
     render() {

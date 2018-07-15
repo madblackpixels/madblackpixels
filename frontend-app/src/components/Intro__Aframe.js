@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // A-frame for VR
 import 'aframe'
 import 'aframe-particle-system-component';
-import {Entity, Scene, Camera } from 'aframe-react';
+import {Entity, Scene } from 'aframe-react';
 
 
 // code

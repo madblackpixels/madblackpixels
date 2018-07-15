@@ -1,14 +1,28 @@
-from rest_framework import generics
+from apps.common.models      import Page, Lead
+from apps.common.serializers import PagesSerializer, LeadSerializer
 
-from apps.common.models      import Pages
-from apps.common.serializers import PagesSerializer
+# Permissions
+from rest_framework.permissions import AllowAny
+
+from rest_framework.generics import (
+    CreateAPIView,
+    ListAPIView
+)
 
 
-class IntroPage(generics.ListAPIView):
+# Site views
+# -------------------------------------------------------------- >
+class IntroPage(ListAPIView):
     serializer_class = PagesSerializer
-    queryset = Pages.objects.filter(name='IntroPage')
+    queryset = Page.objects.filter(name='IntroPage')
 
 
-class ContactPage(generics.ListAPIView):
-    serializer_class = PagesSerializer
-    queryset = Pages.objects.filter(name='ContactPage')
+# System views
+# -------------------------------------------------------------- >
+class LeadCreate(CreateAPIView):
+    serializer_class = LeadSerializer
+    queryset = Lead.objects.all()
+
+    permission_classes = (AllowAny, )
+
+
