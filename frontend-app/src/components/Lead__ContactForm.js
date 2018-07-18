@@ -24,6 +24,27 @@ export default class Lead__ContactForm extends Component {
         }
     };
 
+
+    // clear form data parent/child states after submit
+    componentDidMount()    { this.props.onRef(this) }
+    componentWillUnmount() { this.props.onRef(undefined) }
+
+    clearForm() {
+        this.props.update_leadStates({
+            leadName: '',
+            leadMail: '',
+            leadText: '',
+        });
+
+        this.setState({
+            leadName: '',
+            leadMail: '',
+            leadText: '',
+        });
+    };
+
+
+    // update parent LeadForm data and current Lead states for validation
     update_leadName = (e) => {
         this.props.update_leadStates({leadName: e.target.value});
         this.setState({leadName: e.target.value});

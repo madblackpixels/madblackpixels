@@ -184,6 +184,19 @@
     margin-bottom: 18px;
 }
 
+/* - > ----------   Modal feedback  ---------- < - */
+.modal-feedback__text{
+    padding: 45px 12px 36px 12px;
+    font-size: 20px;
+}
+.brand-logo__modal{
+    width: 118px;
+}
+.modal-content{
+    border-radius: 0px;
+    padding: 14px 0 14px 0;
+}
+
 /* - > Other < - */
 .no-padding{
     padding: 0;
@@ -223,9 +236,11 @@
 }
 .btn_form__lead{
     width: 100%;
-
 }
 
+.border-right__yellow{
+    border-right: 3px solid #efbf05;
+}
 
 
 
@@ -333,6 +348,15 @@ label {
         font-size: 34px;
     }
 }
+@media (max-width: 767px) {
+    .brand-logo__modal{
+        width: 80px;
+    }
+    .modal-feedback__text{
+        padding: 25px 12px 18px 12px;
+        font-size: 20px;
+    }
+}
 @media (max-width: 640px) {
     .intro-block{
         width: 475px;
@@ -346,6 +370,12 @@ label {
     }
     .block__h2{
         font-size: 48px;
+    }
+    .lead-modal__small_fixed{
+        width: 105px!important;
+    }
+    .lead-modal__small_adaptive{
+        width: calc(100% - 105px);
     }
 }
 @media (max-width: 540px) {
@@ -399,6 +429,18 @@ label {
         padding-right: 0;
         padding-left: 0;
     }
+    .lead-modal__small_fixed{
+        width: 85px!important;
+    }
+    .lead-modal__small_adaptive{
+        width: calc(100% - 85px);
+    }
+    .lead-modal__small_adaptive .close{
+        display: none;
+    }
+    .modal-feedback__text{
+        font-size: 18px;
+    }
 }
 @media (max-width: 440px) {
     .intro-block{
@@ -413,6 +455,10 @@ label {
     .block__h2{
         font-size: 34px;
     }
+    .modal-feedback__text{
+        padding: 18px 12px 8px 12px;
+        font-size: 16px;
+    }
 }
 @media (max-width: 350px) {
     .intro-block{
@@ -426,5 +472,8 @@ label {
     }
     .block__h2{
         font-size: 28px;
+    }
+    .modal-feedback__text{
+        font-size: 12px;
     }
 }
