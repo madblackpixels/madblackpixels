@@ -6,7 +6,6 @@ import { Grid, Row, Col, Image, Modal } from 'react-bootstrap'
 // components
 import Lead__ContactForm   from '../../components/Lead__ContactForm'
 import Lead__ContactText   from '../../components/Lead__ContactText'
-import Lead__ModalFeedback from '../../components/Lead__ModalFeedback'
 
 // logic
 import { sendPOSTRequest } from '../../logic/General_ApiReq'
@@ -23,11 +22,9 @@ export default class Main_LeadBlock extends Component {
             leadMail: '',
             leadText: '',
 
-            showModal: false,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
     update_leadStates = (val) => {
@@ -45,8 +42,11 @@ export default class Main_LeadBlock extends Component {
 
         sendPOSTRequest('/send_lead/', data);
         this.child.clearForm();
-        this.setState({ showModal: true })
-
+        this.props.addNotification(
+            'info',
+            this.props.content.main_lead_modal_title,
+            this.props.content.main_lead_modal_body,
+        );
     };
 
 
@@ -54,11 +54,6 @@ export default class Main_LeadBlock extends Component {
 
         return(
             <Grid fluid={true} className="no-padding">
-
-                <Lead__ModalFeedback
-                    content={this.props.content}
-                    showModal={this.state.showModal}
-                    update_leadStates={this.update_leadStates.bind(this)} />
 
                 <Grid className="block__container">
                     <h2 className="block__h2">{this.props.content.main_lead_title}</h2>

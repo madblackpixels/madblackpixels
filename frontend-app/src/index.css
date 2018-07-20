@@ -185,17 +185,21 @@
 }
 
 /* - > ----------   Modal feedback  ---------- < - */
-.modal-feedback__text{
-    padding: 45px 12px 36px 12px;
-    font-size: 20px;
+.notification-item,
+.notification-item-root,
+.notification-message,
+.notification-title{
+    font-family: 'Play', sans-serif!important;
+    letter-spacing: .5px;
+    border-radius: 0px!important;
 }
-.brand-logo__modal{
-    width: 118px;
+.notification-info{
+    color: #f7f7f7!important;
+    background-color: #353535!important;
+    border-left: 8px solid #000!important;
 }
-.modal-content{
-    border-radius: 0px;
-    padding: 14px 0 14px 0;
-}
+
+
 
 /* - > Other < - */
 .no-padding{
@@ -270,6 +274,7 @@ body{
     text-shadow: none;
     border-radius: 0px;
     border: 1px solid #bfbfbf;
+    height: 40px;
 }
 .form-control:focus{
     border-color: #353535;
@@ -283,7 +288,7 @@ label {
 }
 
 .has-feedback label~.form-control-feedback{
-    top: 30px;
+    top: 33px;
 }
 
 .has-success .form-control{

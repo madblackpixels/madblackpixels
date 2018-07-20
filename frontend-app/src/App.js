@@ -9,6 +9,10 @@ import SiteHeader from './blocks/General/General_SiteHeader'
 import SlideMenu  from './blocks/General/General_SlideMenu'
 import Footer     from './blocks/General/General_SiteFooter'
 
+// notifications
+import ReactNotification from "react-notifications-component";
+import '../node_modules/react-notifications-component/dist/theme.css'
+
 // pages
 import MainPage from './pages/MainPage'
 
@@ -25,12 +29,28 @@ export default class App extends Component {
         };
 
         this.update_AppStates = this.update_AppStates.bind(this);
+        this.addNotification  = this.addNotification.bind(this);
     };
 
 
     update_AppStates(event) {
         this.setState(event);
     };
+
+    addNotification(type, title, msg) {
+        this.notificationDOMRef.addNotification({
+            title: title,
+            message: msg,
+            type: type,
+            width: 300,
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animated", "fadeIn"],
+            animationOut: ["animated", "flipOutY"],
+            dismiss: { duration: 2500 },
+            dismissable: { click: true }
+        });
+    }
 
 
     render() {
@@ -40,14 +60,20 @@ export default class App extends Component {
                  <SiteHeader  update_AppStates={this.update_AppStates.bind(this)} />
                  <SlideMenu   update_AppStates={this.update_AppStates.bind(this)} menuOpen={this.state.menuOpen} />
 
+                 <ReactNotification ref={input => this.notificationDOMRef = input} />
+
                  <Switch>
                      <Route path='/'
                          render={
-                             (props) => <MainPage {...props} lang={this.state.siteLang} />
+                             (props) =>
+                                 <MainPage
+                                     {...props}
+                                     lang={this.state.siteLang}
+                                     addNotification={this.addNotification.bind(this)}
+                                 />
                          }
                      />
                  </Switch>
-
                  <Footer />
              </Grid>
         )

@@ -10,10 +10,11 @@
         "main_lead_input_name":"Ваше имя",
         "main_lead_input_mail":"Ваша почта",
         "main_lead_input_problem":"Опишите ваш проект",
-        "main_lead_hello_description":"Остались вопросы? Есть идеи? Давайте общаться!",
+        "main_lead_hello_description":"Мы любим, когда нам пишут. Пишите нам больше!",
         "main_lead_join_description":"Можешь отправить свое резюме, если хочешь работать с нами.",
         "main_lead_submit_btn":"отправить",
-        "main_lead_modal_feedback":"Мы с Вами обязательно свяжемся!"
+        "main_lead_modal_title":"Супер!",
+        "main_lead_modal_body":"Мы с Вами обязательно свяжемся."
       },
       "en": {
         "main_intro_title":"MadBlackPixels",
@@ -25,7 +26,8 @@
         "main_lead_hello_description":"Any question? Any idea? Let's Talk!",
         "main_lead_join_description":"Send your story if you want join to us.",
         "main_lead_submit_btn":"send",
-        "main_lead_modal_feedback":"Thx! We will contact you."
+        "main_lead_modal_title":"Cool!",
+        "main_lead_modal_body":"We will contact you."
       }
     }
   }

@@ -39,7 +39,7 @@ export default class MainPage extends Component {
         return(
             <Grid fluid={true} className="no-padding">
                 <Main_IntroBlock content={this.state.content}/>
-                <Main_LeadBlock  content={this.state.content}/>
+                <Main_LeadBlock  content={this.state.content} addNotification={this.props.addNotification}/>
             </Grid>
         )
     }
