@@ -166,6 +166,9 @@
     margin-left: 5px;
     user-select: none;
 }
+.a-canvas.a-grab-cursor:hover{
+    cursor: default!important;
+}
 
 /* - > Lead_Block < - */
 .block__lead{
