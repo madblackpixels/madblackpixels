@@ -78,7 +78,7 @@ export default class Lead__ContactForm extends Component {
                         <FormControl
                             value={this.state.leadName}
                             onChange={this.update_leadName}
-                            placeholder="..."
+                            placeholder=">"
                             type="text"
                         />
                         <FormControl.Feedback />
@@ -97,7 +97,7 @@ export default class Lead__ContactForm extends Component {
                         <FormControl
                             value={this.state.leadMail}
                             onChange={this.update_leadMail}
-                            placeholder="..."
+                            placeholder=">"
                             type="email"
                         />
                         <FormControl.Feedback />
@@ -116,7 +116,7 @@ export default class Lead__ContactForm extends Component {
                         <FormControl
                             value={this.state.leadText}
                             onChange={this.update_leadText}
-                            placeholder="..."
+                            placeholder=">"
                             className="lead_textarea"
                             componentClass="textarea"
                             rows="5"
