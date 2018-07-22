@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // bootstrap
-import { Grid, Row, Col, Image, Modal } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 
 // components
 import Lead__ContactForm   from '../../components/Lead__ContactForm'
