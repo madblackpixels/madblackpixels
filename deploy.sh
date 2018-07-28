@@ -31,6 +31,13 @@ else
 	exit 1
 fi
 
+
+
+####### Pull updates #######
+git pull
+
+
+
 ####### Parse environment attributes #######
 while IFS="=" read lhs rhs
 do
