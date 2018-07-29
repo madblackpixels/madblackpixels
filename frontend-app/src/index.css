@@ -449,6 +449,9 @@ label {
     .modal-feedback__text{
         font-size: 18px;
     }
+    .notification-container-top-right{
+        top: 100px!important;
+    }
 }
 @media (max-width: 440px) {
     .intro-block{
