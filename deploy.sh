@@ -31,12 +31,8 @@ else
 	exit 1
 fi
 
-
-
 ####### Pull updates #######
 git pull
-
-
 
 ####### Parse environment attributes #######
 while IFS="=" read lhs rhs
@@ -109,11 +105,12 @@ if [[ $env_name = "verify" ]]; then
 fi
 
 ####### Prepair database backups #######
-if [[ $env_name = "production" ]]; then
-	mkdir -p /srv/pg_backups/backups
-	cp ./database-backup/backup_script.py /srv/pg_backups/
-	crontab ./database-backup/crontab
-fi
+#if [[ $env_name = "production" ]]; then
+#	mkdir -p /srv/pg_backups/backups
+#	cp ./database-backup/backup_script.py /srv/pg_backups/
+#	crontab ./database-backup/crontab
+#fi
 
 ####### Run docker-compose #######
 docker-compose -f ./${env_name}.yml up
+
