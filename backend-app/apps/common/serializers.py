@@ -10,6 +10,7 @@ from apps.common.models import Page, Lead
 # Other
 import re
 
+from apps.modules.notifications.mail import Sender
 
 # Site serializer
 # -------------------------------------------------------------- >
@@ -49,5 +50,6 @@ class LeadSerializer(serializers.ModelSerializer):
                     'error': 'Validation error!'
                 }); break
 
+        Sender('test').send_mail()
         return Lead.objects.create(**validated_data)
 

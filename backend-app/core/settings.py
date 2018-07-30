@@ -27,7 +27,12 @@ INSTALLED_APPS = [
     'rest_framework_cache',
     'corsheaders',
     'rest_framework',
+
+    # apps
     'apps.common',
+
+    #common
+    'apps.modules.notifications',
 ]
 
 MIDDLEWARE = [

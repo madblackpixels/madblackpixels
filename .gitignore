@@ -5,12 +5,14 @@ nginx.conf
 common.js
 
 __pycache__/
+*/settings.py
 *.pyc
 env/
 
 node_modules/
 coverage/
 build/
+migrations/
 *.local
 
 

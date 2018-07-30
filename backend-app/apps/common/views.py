@@ -21,8 +21,6 @@ class IntroPage(ListAPIView):
 # -------------------------------------------------------------- >
 class LeadCreate(CreateAPIView):
     serializer_class = LeadSerializer
-    queryset = Lead.objects.all()
-
     permission_classes = (AllowAny, )
 
 
