@@ -13,6 +13,7 @@ import re
 # Modules
 from apps.modules.notifications.mail import Sender
 
+
 # Site serializer
 # -------------------------------------------------------------- >
 class PagesSerializer(CachedSerializerMixin):
@@ -36,7 +37,8 @@ class LeadSerializer(serializers.ModelSerializer):
         model = Lead
         fields = ('name', 'mail', 'text')
 
-    def create(self, validated_data):
+    @staticmethod
+    def create(validated_data):
         data = {
             validated_data['name']: re.compile('[А-яA-z ]+'),
             validated_data['mail']: re.compile('([\w.%+-]+)@([\w-]+\.)+([\w]{2,})'),
@@ -51,6 +53,6 @@ class LeadSerializer(serializers.ModelSerializer):
                     'error': 'Validation error!'
                 }); break
 
-        Sender('test').send_mail()
+        #Sender('test').send_mail()
         return Lead.objects.create(**validated_data)
 
