@@ -8,6 +8,8 @@ __pycache__/
 */settings.py
 *.pyc
 env/
+backend-app/static_files/admin/
+backend-app/static_files/rest_framework/
 
 node_modules/
 coverage/
