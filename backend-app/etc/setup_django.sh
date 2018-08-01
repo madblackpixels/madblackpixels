@@ -26,7 +26,7 @@ User.objects.create_superuser($ADMIN_NAME, $ADMIN_MAIL, $ADMIN_PASS)" | python3 
 if [[ $ENV = "development" ]]; then
 	python3 manage.py runserver $BACKEND_SERVICE_HOST:$BACKEND_SERVICE_PORT
 else
-	yes | python3 /backend/manage.py collectstatic
+	yes 'yes' | python3 /backend/manage.py collectstatic
 	touch /uwsgi.log
 	/usr/local/bin/uwsgi --ini /backend/etc/uwsgi.ini
 fi
