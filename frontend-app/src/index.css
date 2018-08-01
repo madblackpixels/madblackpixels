@@ -13,6 +13,7 @@
 .background-color__black{
     background-color: #353535;
 }
+
 .background-color__white{
     background-color: #f7f7f7;
 }
@@ -202,7 +203,17 @@
     border-left: 8px solid #000!important;
 }
 
+/* - > ----------   Block Clients  ---------- < - */
+.client-logo__black{
+    width: 300px;
+}
 
+
+
+/* - > ----------   Block Client  ---------- < - */
+.image-background__client{
+    background-image: url('/backend-app/static_files/background_pixels_bottom.png');
+}
 
 /* - > Other < - */
 .no-padding{
@@ -247,6 +258,10 @@
 
 .border-right__yellow{
     border-right: 3px solid #efbf05;
+}
+.position-right__text{
+    text-align: right;
+    width: 100%;
 }
 
 

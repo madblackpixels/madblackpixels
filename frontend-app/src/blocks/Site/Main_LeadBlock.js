@@ -10,7 +10,6 @@ import Lead__ContactText   from '../../components/Lead__ContactText'
 // logic
 import { sendPOSTRequest } from '../../logic/General_ApiReq'
 
-
 // code
 export default class Main_LeadBlock extends Component {
 
