@@ -22,7 +22,7 @@ services:
       - database
     volumes:
       - static:/backend/static_files
-      - media:/media_files
+      - media:/backend/media_files
 
   backend-nginx:
     build: ./backend-nginx
