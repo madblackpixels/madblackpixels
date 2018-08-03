@@ -145,7 +145,8 @@ REST_FRAMEWORK_CACHE = {
 STATIC_ROOT = '/backend/static_files/'
 STATIC_URL  = '/static/'
 
-
+# for dev
+#STATICFILES_DIRS = ('/backend/static_files', )
 
 # Media files
 #MEDIA_URL  = '/media/'

@@ -32,7 +32,9 @@ else
 fi
 
 ####### Pull updates #######
-git pull
+if [[ $env_name = "production" ]]; then
+    git pull
+fi
 
 ####### Parse environment attributes #######
 while IFS="=" read lhs rhs
