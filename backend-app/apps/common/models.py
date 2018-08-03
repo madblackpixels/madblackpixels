@@ -16,6 +16,19 @@ class Page(models.Model):
     data = models.ForeignKey(Lang, on_delete=models.CASCADE)
 
 
+class Client(models.Model):
+    name = models.CharField(max_length=200, blank=False)
+    show = models.BooleanField(blank=False, default=False)
+
+    logo_black = models.ImageField(upload_to='media/clients', default=False)
+    logo_color = models.ImageField(upload_to='media/clients', default=False)
+
+    system_date = models.DateField(default=date.today, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
 # -------------------------------------------------------------- >
 # System models
 class Lead(models.Model):

@@ -9,7 +9,7 @@ export async function getSimpleData(api_link) {
         );
 
         const  jsonData = await apiData.json();
-        return jsonData[0]
+        return jsonData
 
     } catch (e) {
         console.log(e);

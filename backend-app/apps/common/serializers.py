@@ -5,7 +5,7 @@ from rest_framework_cache.serializers import CachedSerializerMixin
 from rest_framework_cache.registry import cache_registry
 
 # Models
-from apps.common.models import Page, Lead
+from apps.common.models import Page, Lead, Client
 
 # Other
 import re
@@ -14,7 +14,7 @@ import re
 from apps.modules.notifications.mail import Sender
 
 
-# Site serializer
+# Pages serializer
 # -------------------------------------------------------------- >
 class PagesSerializer(CachedSerializerMixin):
 
@@ -26,7 +26,16 @@ class PagesSerializer(CachedSerializerMixin):
         fields = ('id', 'data_ru', 'data_en')
 
 
+# Blocks serializer
+# -------------------------------------------------------------- >
+class ClientSerializer(CachedSerializerMixin):
+    class Meta:
+        model = Client
+        fields = ('id', 'logo_black', 'logo_color')
+
+
 cache_registry.register(PagesSerializer)
+cache_registry.register(ClientSerializer)
 
 
 # System serializer

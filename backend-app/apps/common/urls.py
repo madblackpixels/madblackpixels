@@ -4,6 +4,9 @@ from apps.common import views
 
 urlpatterns = [
     url(r'^main_page_content/$', views.IntroPage.as_view()),
+    # -------------------------------------------------------------- >
+
+    url(r'^client_block_content/$', views.ClientBlock.as_view()),
 
     # -------------------------------------------------------------- >
     url(r'^send_lead/$', views.LeadCreate.as_view())

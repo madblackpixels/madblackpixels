@@ -14,6 +14,7 @@ python3 /backend/manage.py migrate notifications
 
 python3 /backend/manage.py loaddata /backend/fixtures/common_langs.json
 python3 /backend/manage.py loaddata /backend/fixtures/common_pages.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_clients.json
 
 # create admin user
 

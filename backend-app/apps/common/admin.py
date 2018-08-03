@@ -1,7 +1,7 @@
 import json
 
 # models
-from .models import Lang, Lead
+from .models import Lang, Lead, Client
 
 # common
 from django.contrib import admin
@@ -26,6 +26,7 @@ class ReadableJSONFormField(JSONField_forms):
 
 # registry admin
 admin.site.register(Lead)
+admin.site.register(Client)
 
 
 @admin.register(Lang)

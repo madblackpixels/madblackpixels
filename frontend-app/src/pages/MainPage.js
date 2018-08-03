@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { getSimpleData }    from '../logic/General_ApiReq'
 
 //bootstrap
 import { Grid } from 'react-bootstrap'
@@ -8,6 +7,9 @@ import { Grid } from 'react-bootstrap'
 import Main_IntroBlock   from '../blocks/Site/Main_IntroBlock'
 import Main_LeadBlock    from '../blocks/Site/Main_LeadBlock'
 import Main_Clients      from '../blocks/Site/Main_Clients'
+
+// logic
+import { getSimpleData }    from '../logic/General_ApiReq'
 
 // code
 export default class MainPage extends Component {
@@ -19,7 +21,7 @@ export default class MainPage extends Component {
 
     updateContent() {
         getSimpleData("/main_page_content").then(result => this.setState({
-            content: result[this.props.lang]
+            content: result[0][this.props.lang]
         }))
     }
 

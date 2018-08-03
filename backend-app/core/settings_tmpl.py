@@ -149,8 +149,9 @@ STATIC_URL  = '/static/'
 #STATICFILES_DIRS = ('/backend/static_files', )
 
 # Media files
-#MEDIA_URL  = '/media/'
-#MEDIA_ROOT = '/media/'
+MEDIA_ROOT = '/backend/media_files/'
+MEDIA_URL  = '/media/'
+
 
 # Core list settings
 CORS_ORIGIN_WHITELIST = ()
