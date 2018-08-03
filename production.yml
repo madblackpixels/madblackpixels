@@ -22,6 +22,7 @@ services:
       - database
     volumes:
       - static:/backend/static_files
+      - media:/media_files
 
   backend-nginx:
     build: ./backend-nginx
@@ -34,6 +35,7 @@ services:
       - backend-app
     volumes:
       - static:/static_files
+      - media:/media_files
 
   frontend-app:
     build: ./frontend-app
@@ -61,4 +63,5 @@ services:
 volumes:
   frontend:
   static:
+  media:
 
