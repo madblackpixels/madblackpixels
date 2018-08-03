@@ -56,8 +56,10 @@ sed -i -e "s/SECRET_KEY = /SECRET_KEY = $SECRET_KEY/"                  ./backend
 
 if [[ $env_name = "production" ]]; then
 	sed -i -e "s/CORS_ORIGIN_WHITELIST = ()/CORS_ORIGIN_WHITELIST = ($CORS_LIST)/" ./backend-app/core/settings.py
+	sed -i -e "s/DEBUG = /DEBUG = False/"                                          ./backend-app/core/settings.py
 else
-	sed -i -e "s/CORS_ORIGIN_WHITELIST = ()/CORS_ORIGIN_ALLOW_ALL = True/" 			 ./backend-app/core/settings.py
+	sed -i -e "s/CORS_ORIGIN_WHITELIST = ()/CORS_ORIGIN_ALLOW_ALL = True/" 		   ./backend-app/core/settings.py
+	sed -i -e "s/DEBUG = /DEBUG = True/"                                           ./backend-app/core/settings.py
 fi
 
 rm -rf ./backend-app/core/settings.py-e
