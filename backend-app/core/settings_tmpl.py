@@ -147,8 +147,8 @@ STATIC_URL  = '/static/'
 
 
 # Media files
-#MEDIA_ROOT = '/backend/media_files/'
-#MEDIA_URL  = '/media/'
+MEDIA_ROOT = '/backend/media_files/'
+MEDIA_URL  = '/media/'
 
 
 # Core list settings
