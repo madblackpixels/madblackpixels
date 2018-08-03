@@ -29,6 +29,5 @@ class ClientBlock(ListAPIView):
 # -------------------------------------------------------------- >
 class LeadCreate(CreateAPIView):
     serializer_class = LeadSerializer
-    permission_classes = (AllowAny, )
 
 
