@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 
+DEBUG =
 
 ALLOWED_HOSTS = []
 
@@ -145,8 +145,6 @@ REST_FRAMEWORK_CACHE = {
 STATIC_ROOT = '/backend/static_files/'
 STATIC_URL  = '/static/'
 
-# for dev
-#STATICFILES_DIRS = ('/backend/static_files', )
 
 # Media files
 MEDIA_ROOT = '/backend/media_files/'
