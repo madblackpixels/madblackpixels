@@ -22,6 +22,7 @@ class IntroPage(ListAPIView):
 class ClientBlock(ListAPIView):
     serializer_class = ClientSerializer
     queryset = Client.objects.filter(show=True)
+    permission_classes = (AllowAny, )
 
 
 # System views
