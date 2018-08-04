@@ -54,11 +54,10 @@ rm -rf ./backend-app/core/settings.py && cp ./backend-app/core/settings_tmpl.py 
 sed -i -e "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[$ALLOWED_LIST\]/"  ./backend-app/core/settings.py
 sed -i -e "s/SECRET_KEY =/SECRET_KEY = $SECRET_KEY/"                   ./backend-app/core/settings.py
 
-
+echo "STATIC_ROOT = '/static/'"   >> ./backend-app/core/settings.py
+echo "MEDIA_ROOT = '/media/'"     >> ./backend-app/core/settings.py
 echo "STATIC_URL = ${STATIC_URL}" >> ./backend-app/core/settings.py
 echo "MEDIA_URL = ${MEDIA_URL}"   >> ./backend-app/core/settings.py
-echo "STAITC_ROOT = '/static/'"   >> ./backend-app/core/settings.py
-echo "MEDIA_ROOT = '/media/'"     >> ./backend-app/core/settings.py
 
 
 if [[ $env_name = "production" ]]; then
