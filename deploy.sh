@@ -55,9 +55,10 @@ sed -i -e "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[$ALLOWED_LIST\]/"  ./backend
 sed -i -e "s/SECRET_KEY =/SECRET_KEY = $SECRET_KEY/"                   ./backend-app/core/settings.py
 
 echo "STATIC_ROOT = ${STATIC_ROOT}"   >> ./backend-app/core/settings.py
+echo "STATIC_URL = ${STATIC_URL}"     >> ./backend-app/core/settings.py
+
 echo "MEDIA_ROOT = ${MEDIA_ROOT}"     >> ./backend-app/core/settings.py
-echo "STATIC_URL = ${STATIC_URL}" >> ./backend-app/core/settings.py
-echo "MEDIA_URL = ${MEDIA_URL}"   >> ./backend-app/core/settings.py
+echo "MEDIA_URL = ${MEDIA_URL}"       >> ./backend-app/core/settings.py
 
 
 if [[ $env_name = "production" ]]; then
