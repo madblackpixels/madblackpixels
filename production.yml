@@ -34,8 +34,8 @@ services:
     depends_on:
       - backend-app
     volumes:
-      - static:/static
-      - media:/media
+      - static:/static_files
+      - media:/media_files
 
   frontend-app:
     build: ./frontend-app
