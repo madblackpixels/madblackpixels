@@ -38,7 +38,7 @@ export default class Main_Clients extends Component {
                     <h2 className="block__h2 position-right__text">Клиенты</h2>
                     <Row className="block__lead">
                         {this.state.content.map(client => (
-                            <Client__Icon client={client}/>
+                            <Client__Icon key={client.id} client={client} />
                         ))}
                     </Row>
                 </Grid>
