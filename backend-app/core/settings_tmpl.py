@@ -139,17 +139,11 @@ REST_FRAMEWORK_CACHE = {
     'DEFAULT_CACHE_TIMEOUT': 86400, # Default is 1 day
 }
 
+# Core list settings
+CORS_ORIGIN_WHITELIST = ()
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATIC_ROOT = '/backend/static_files/'
 STATIC_URL  = '/static/'
+MEDIA_URL   = '/media/'
 
-
-# Media files
-MEDIA_ROOT = '/backend/media_files/'
-MEDIA_URL  = '/media/'
-
-
-# Core list settings
-CORS_ORIGIN_WHITELIST = ()

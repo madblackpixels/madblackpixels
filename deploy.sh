@@ -54,12 +54,19 @@ rm -rf ./backend-app/core/settings.py && cp ./backend-app/core/settings_tmpl.py 
 sed -i -e "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[$ALLOWED_LIST\]/"  ./backend-app/core/settings.py
 sed -i -e "s/SECRET_KEY =/SECRET_KEY = $SECRET_KEY/"                   ./backend-app/core/settings.py
 
+echo "STATIC_ROOT = ${STATIC_ROOT}" >> ./backend-app/core/settings.py
+echo "MEDIA_ROOT = ${MEDIA_ROOT}"   >> ./backend-app/core/settings.py
+
 if [[ $env_name = "production" ]]; then
+
 	sed -i -e "s/CORS_ORIGIN_WHITELIST = ()/CORS_ORIGIN_WHITELIST = ($CORS_LIST)/" ./backend-app/core/settings.py
 	sed -i -e "s/DEBUG =/DEBUG = False/"                                           ./backend-app/core/settings.py
+
 else
+
 	sed -i -e "s/CORS_ORIGIN_WHITELIST = ()/CORS_ORIGIN_ALLOW_ALL = True/" 		   ./backend-app/core/settings.py
 	sed -i -e "s/DEBUG =/DEBUG = True/"                                            ./backend-app/core/settings.py
+
 fi
 
 rm -rf ./backend-app/core/settings.py-e

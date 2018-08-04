@@ -29,4 +29,7 @@ POSTGRES_HOST=database
 ALLOWED_LIST='localhost','127.0.0.1'
 CORS_LIST='localhost','127.0.0.1'
 
+STATIC_ROOT='/backend/static_files/'
+MEDIA_ROOT='/backend/media_files/'
+
 #
