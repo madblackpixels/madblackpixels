@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // bootstrap
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 
 // components
 import Client__Icon   from '../../components/Client__Icon'

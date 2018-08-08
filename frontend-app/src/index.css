@@ -162,7 +162,7 @@
     user-select: none;
 }
 .intro-block__h2{
-    font-size: 40px;
+    font-size: 30px;
     margin-top: -12px;
     margin-left: 5px;
     user-select: none;
@@ -348,7 +348,7 @@ label {
         font-size: 100px;
     }
     .intro-block__h2{
-        font-size: 36px;
+        font-size: 26px;
     }
     .block__h2{
         font-size: 56px;
@@ -368,7 +368,7 @@ label {
         font-size: 80px;
     }
     .intro-block__h2{
-        font-size: 34px;
+        font-size: 24px;
     }
 }
 @media (max-width: 767px) {
@@ -388,7 +388,7 @@ label {
         font-size: 60px;
     }
     .intro-block__h2{
-        font-size: 30px;
+        font-size: 20px;
         margin-left: 0px;
     }
     .block__h2{
@@ -431,7 +431,7 @@ label {
         font-size: 50px;
     }
     .intro-block__h2{
-        font-size: 28px;
+        font-size: 18px;
     }
     .block__h2{
         font-size: 42px;
@@ -476,7 +476,7 @@ label {
         font-size: 40px;
     }
     .intro-block__h2{
-        font-size: 24px;
+        font-size: 14px;
     }
     .block__h2{
         font-size: 34px;
